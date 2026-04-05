@@ -1,0 +1,436 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XII-IPS SMA PGRI SALAWU - Website Kelas Kami</title>
+    <style>
+        /* Reset dan gaya dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f0f8ff;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .school-name {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: #ffd700;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .slogan {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-top: 0.5rem;
+            color: #ffd700;
+        }
+        
+        /* Navigasi */
+        nav {
+            background-color: #2a5298;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+        
+        nav li {
+            margin: 0;
+        }
+        
+        nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: #1e3c72;
+        }
+        
+        /* Konten utama */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #1e3c72;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #ecf0f1;
+            text-align: center;
+        }
+        
+        h3 {
+            color: #2a5298;
+            margin: 1.5rem 0 0.5rem;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+        }
+        
+        /* Struktur Kelas */
+        .class-structure {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .structure-card {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+        
+        .structure-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .structure-card h3 {
+            color: #1e3c72;
+            margin-top: 0;
+        }
+        
+        .wali-kelas {
+            border-top: 4px solid #e74c3c;
+        }
+        
+        .ketua-kelas {
+            border-top: 4px solid #3498db;
+        }
+        
+        .sekretaris {
+            border-top: 4px solid #f39c12;
+        }
+        
+        .bendahara {
+            border-top: 4px solid #9b59b6;
+        }
+        
+        .seksi-acara {
+            border-top: 4px solid #2ecc71;
+        }
+        
+        /* Anggota Kelas */
+        .members-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .member-card {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .member-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .member-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: #2a5298;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin: 0 auto 0.5rem;
+        }
+        
+        /* Prestasi */
+        .achievements {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .achievement {
+            flex: 1 1 200px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .achievement-icon {
+            font-size: 2rem;
+            color: #ffd700;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+        
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-link {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 1px solid white;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        .social-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Responsif */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .class-structure {
+                grid-template-columns: 1fr;
+            }
+            
+            .members-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">🎓</div>
+        <div class="school-name">SMA PGRI SALAWU</div>
+        <h1>KELAS XII-IPS</h1>
+        <p class="slogan">"Unggul dalam Prestasi, Berkarakter, dan Berbudaya"</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#tentang">Tentang Kami</a></li>
+            <li><a href="#struktur">Struktur Kelas</a></li>
+            <li><a href="#anggota">Anggota Kelas</a></li>
+            <li><a href="#prestasi">Prestasi</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <section id="tentang">
+            <h2>Tentang Kelas XII-IPS</h2>
+            <p>Kami adalah kelas XII-IPS SMA PGRI SALAWU dengan semangat belajar yang tinggi dan komitmen untuk mencapai prestasi terbaik. Dengan motto "Unggul dalam Prestasi, Berkarakter, dan Berbudaya", kami berusaha untuk menjadi yang terbaik dalam akademik maupun non-akademik.</p>
+            <p>Kelas kami terdiri dari siswa-siswa berbakat yang memiliki minat dan bakat beragam, namun memiliki satu tujuan bersama: menjadi pribadi yang unggul dan bermanfaat bagi masyarakat.</p>
+        </section>
+        
+        <section id="struktur">
+            <h2>Struktur Organisasi Kelas</h2>
+            <div class="class-structure">
+                <div class="structure-card wali-kelas">
+                    <h3>Wali Kelas</h3>
+                    <p>Ibu Dewi Rosaliana, M.Pd.</p>
+                    <p>Guru Matematika</p>
+                </div>
+                
+                <div class="structure-card ketua-kelas">
+                    <h3>Ketua Kelas</h3>
+                    <p>Muhamad Ridwan</p>
+                    <p>Memimpin kegiatan kelas</p>
+                </div>
+                
+                <div class="structure-card sekretaris">
+                    <h3>Sekretaris</h3>
+                    <p>Herla Andini Laila</p>
+                    <p>Mencatat kegiatan kelas</p>
+                </div>
+                
+                <div class="structure-card bendahara">
+                    <h3>Bendahara</h3>
+                    <p>Nadina Winandar</p>
+                    <p>Mengelola keuangan kelas</p>
+                </div>
+                
+                <div class="structure-card seksi-acara">
+                    <h3>Seksi Keagamaan</h3>
+                    <p>Rizki Akbar</p>
+                    <p>Mengorganisir kegiatan bidang Agama</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="anggota">
+            <h2>Anggota Kelas</h2>
+            <div class="members-grid">
+                <div class="member-card">
+                    <div class="member-avatar">MR</div>
+                    <h4>Muhamad Ridwan</h4>
+                    <p>Ketua Kelas</p>
+                </div>
+                
+                <div class="member-card">
+                    <div class="member-avatar">HA</div>
+                    <h4>Herla Andini</h4>
+                    <p>Sekretaris</p>
+                </div>
+                
+                <div class="member-card">
+                    <div class="member-avatar">NW</div>
+                    <h4>Nadina Winandar</h4>
+                    <p>Bendahara</p>
+                </div>
+                
+                <div class="member-card">
+                    <div class="member-avatar">RA</div>
+                    <h4>Rizki Akbar</h4>
+                    <p>Seksi Keagamaan</p>
+                </div>
+                
+                <div class="member-card">
+                    <div class="member-avatar">AB</div>
+                    <h4>Anggota 1</h4>
+                    <p>Anggota</p>
+                </div>
+                
+                <div class="member-card">
+                    <div class="member-avatar">CD</div>
+                    <h4>Anggota 2</h4>
+                    <p>Anggota</p>
+                </div>
+                
+                <div class="member-card">
+                    <div class="member-avatar">EF</div>
+                    <h4>Anggota 3</h4>
+                    <p>Anggota</p>
+                </div>
+                
+                <div class="member-card">
+                    <div class="member-avatar">GH</div>
+                    <h4>Anggota 4</h4>
+                    <p>Anggota</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="prestasi">
+            <h2>Prestasi Kelas</h2>
+            <div class="achievements">
+                <div class="achievement">
+                    <div class="achievement-icon">🥇</div>
+                    <h3>Juara 1 Spelling Bee</h3>
+                    <p>Kompetisi Sastra Tingkat Sekolah</p>
+                </div>
+                
+                <div class="achievement">
+                    <div class="achievement-icon">🥈</div>
+                    <h3>Juara 2 Debat Bahasa</h3>
+                    <p>Lomba Debat Bahasa Inggris</p>
+                </div>
+                
+                <div class="achievement">
+                    <div class="achievement-icon">🏆</div>
+                    <h3>Kelas Terdisiplin</h3>
+                    <p>Penghargaan Bulanan Sekolah</p>
+                </div>
+                
+                <div class="achievement">
+                    <div class="achievement-icon">📚</div>
+                    <h3>Nilai Rata-rata Tertinggi</h3>
+                    <p>Setiap Semester</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="kontak">
+            <h2>Kontak Kami</h2>
+            <p>Jika Anda ingin menghubungi kelas XII-IPS, silakan hubungi kami melalui:</p>
+            <p>Email: xii.ips@smapgrisalawu.sch.id</p>
+            <p>Telepon: 085877216302</p>
+            <p>Alamat: Jl. Pendidikan No. 123, Salawu</p>
+            <p>Instagram: @twelve_socialexcellent</p>
+            <p>Credits By: @ridwanthegreat - Copyright 2025 Park Ridwan</p>
+        </section>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 PARK RIDWAN  - All Rights Reserved</p>
+        <p>Website Resmi Kelas XII-IPS</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/twelve_socialexcellent/" class="social-link">Instagram Kelas</a>
+            <a href="https://www.instagram.com/ridwanthegreat/" class="social-link">Instagram Ridwan</a>
+        </div>
+    </footer>
+</body>
+</html>
